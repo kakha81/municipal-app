@@ -20,13 +20,11 @@ function HomeScreen({ navigation }) {
       <Button
         style={styles.button_1}
         title="რეგისტრაცია"
-        color="dodgerblue"
         onPress={() => navigation.navigate("Details")}
       />
       <Button
         style={styles.button_1}
-        title="რეგისტრაცია"
-        marginTop="30"
+        title="ცვლილება"
         onPress={() => navigation.navigate("Details")}
       />
     </View>
