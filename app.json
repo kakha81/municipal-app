@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "mosakrebeli_reg",
+    "name": "რეგ-ფორმა",
     "slug": "mosakrebeli_reg",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -22,9 +22,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/logo_municipaluri.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.neomaster.mosakrebeli_reg"
     },
     "web": {
       "favicon": "./assets/favicon.png"
