@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View, Text, TextInput } from "react-native";
 import { Dropdown } from "react-native-element-dropdown";
 
@@ -234,21 +234,29 @@ const data = [
     param: "1 მ2.",
   },
 ];
-// export const N_1 = 20;
+
+export let N_1;
 
 export default function Profile_1() {
   const [value, setValue] = useState(null);
   const [Rate_1, setRate_1] = useState(null);
   const [Param, setParam] = useState(null);
   const [Number_1, setNumber_1] = useState(null);
+  const [Subtotal_1, setSubtotal_1] = useState(0);
 
-  const renderItem = (item) => {
+  N_1 = Subtotal_1;
+
+  useEffect(() => {
+    setSubtotal_1(Rate_1 * Number_1);
+  }, [Rate_1, Number_1]);
+
+  function renderItem(item) {
     return (
       <View style={styles.item}>
         <Text style={styles.textItem}>{item.label}</Text>
       </View>
     );
-  };
+  }
 
   return (
     <View>
@@ -276,6 +284,7 @@ export default function Profile_1() {
             style={styles.textInput_line}
             keyboardType="numeric"
             maxLength={5}
+            defaultvalue={Number_1}
             onChangeText={setNumber_1}
           />
         </View>
