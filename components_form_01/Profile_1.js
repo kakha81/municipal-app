@@ -238,10 +238,10 @@ const data = [
 export let N_1;
 
 export default function Profile_1() {
-  const [value, setValue] = useState(null);
-  const [Rate_1, setRate_1] = useState(null);
-  const [Param, setParam] = useState(null);
-  const [Number_1, setNumber_1] = useState(null);
+  const [value, setValue] = useState(0);
+  const [Rate_1, setRate_1] = useState(0);
+  const [Param, setParam] = useState(0);
+  const [Number_1, setNumber_1] = useState(0);
   const [Subtotal_1, setSubtotal_1] = useState(0);
 
   N_1 = Subtotal_1;
@@ -250,13 +250,13 @@ export default function Profile_1() {
     setSubtotal_1(Rate_1 * Number_1);
   }, [Rate_1, Number_1]);
 
-  function renderItem(item) {
+  const renderItem = (item) => {
     return (
       <View style={styles.item}>
         <Text style={styles.textItem}>{item.label}</Text>
       </View>
     );
-  }
+  };
 
   return (
     <View>
@@ -285,7 +285,7 @@ export default function Profile_1() {
             keyboardType="numeric"
             maxLength={5}
             defaultvalue={Number_1}
-            onChangeText={setNumber_1}
+            onChangeText={(number) => setNumber_1(number)}
           />
         </View>
         <View style={styles.container_line_02}>

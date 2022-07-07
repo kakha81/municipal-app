@@ -236,10 +236,10 @@ const data = [
 export let N_3;
 
 export default function Profile_3() {
-  const [value, setValue] = useState(null);
-  const [Rate_3, setRate_3] = useState(null);
-  const [Param, setParam] = useState(null);
-  const [Number_3, setNumber_3] = useState(null);
+  const [value, setValue] = useState(0);
+  const [Rate_3, setRate_3] = useState(0);
+  const [Param, setParam] = useState(0);
+  const [Number_3, setNumber_3] = useState(0);
   const [Subtotal_3, setSubtotal_3] = useState(0);
 
   N_3 = Subtotal_3;
@@ -282,8 +282,8 @@ export default function Profile_3() {
             style={styles.textInput_line}
             keyboardType="numeric"
             maxLength={5}
-            value={Number_3}
-            onChangeText={setNumber_3}
+            defaultvalue={Number_3}
+            onChangeText={(number) => setNumber_3(number)}
           />
         </View>
         <View style={styles.container_line_02}>

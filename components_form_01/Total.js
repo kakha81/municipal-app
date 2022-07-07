@@ -12,11 +12,11 @@ export default function Total() {
     <View style={styles.container_line}>
       <Button
         onPress={() => {
-          setTotalCount(N_1 + N_2 + N_3);
+          setTotalCount((((N_1 + N_2 + N_3) * 10) / 10).toFixed(2));
         }}
         title="თვის ტარიფი"
       />
-      <Text style={styles.text_line_2}>{totalCount.toFixed(2)}</Text>
+      <Text style={styles.text_line_2}>{totalCount}</Text>
 
       <Text style={styles.text_line_3}>ლარი.</Text>
     </View>
