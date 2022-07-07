@@ -16,31 +16,9 @@ export default function Total() {
         }}
         title="თვის ტარიფი"
       />
-      <Text style={styles.text_line_2}>{totalCount}</Text>
-      {/* <TextInput
-        style={styles.text_line_2}
-        style={styles.textInput_line}
-        keyboardType="numeric"
-        maxLength={5}
-        value={Number_1}
-        onChangeText={setNumber_1}
-      /> */}
+      <Text style={styles.text_line_2}>{totalCount.toFixed(2)}</Text>
+
       <Text style={styles.text_line_3}>ლარი.</Text>
-      {/* <Button
-        onPress={() => {
-          captureScreen({
-            format: "jpg",
-            quality: 0.8,
-          }).then(
-            //callback function to get the result URL of the screnshot
-            (uri) => {
-              setSavedImagePath(uri);
-              setImageURI(uri);
-            }
-          );
-        }}
-        title="SCREENSHOT"
-      /> */}
     </View>
   );
 }
