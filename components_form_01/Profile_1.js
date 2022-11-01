@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { StyleSheet, View, Text, TextInput } from "react-native";
 import { Dropdown } from "react-native-element-dropdown";
-
 const data = [
   {
     label: "1. მუზეუმები, ბიბლიოთეკები, გალერეები, არქივები.",
@@ -234,22 +233,17 @@ const data = [
     param: "1 მ2.",
   },
 ];
-
 export let N_1;
-
 export default function Profile_1() {
-  const [value, setValue] = useState(0);
-  const [Rate_1, setRate_1] = useState(0);
-  const [Param, setParam] = useState(0);
-  const [Number_1, setNumber_1] = useState(0);
-  const [Subtotal_1, setSubtotal_1] = useState(0);
-
+  const [value, setValue] = useState(null);
+  const [Rate_1, setRate_1] = useState(null);
+  const [Param, setParam] = useState(null);
+  const [Number_1, setNumber_1] = useState(null);
+  const [Subtotal_1, setSubtotal_1] = useState(null);
   N_1 = Subtotal_1;
-
   useEffect(() => {
     setSubtotal_1(Rate_1 * Number_1);
   }, [Rate_1, Number_1]);
-
   const renderItem = (item) => {
     return (
       <View style={styles.item}>
@@ -257,7 +251,6 @@ export default function Profile_1() {
       </View>
     );
   };
-
   return (
     <View>
       <Dropdown
@@ -265,10 +258,10 @@ export default function Profile_1() {
         placeholderStyle={styles.placeholderStyle}
         selectedTextStyle={styles.selectedTextStyle}
         data={data}
-        maxHeight={300}
+        maxHeight={1000}
         labelField="label"
         valueField="value"
-        placeholder="პროფილი"
+        placeholder="პ რ ო ფ ი ლ ი"
         value={value}
         renderItem={renderItem}
         onChange={(item) => {
@@ -298,11 +291,9 @@ export default function Profile_1() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   dropdown: {
-    margin: 0,
-    height: 80,
+    height: 65,
     color: "red",
     backgroundColor: "white",
     padding: 12,
@@ -313,9 +304,6 @@ const styles = StyleSheet.create({
       width: 0,
       height: 1,
     },
-    shadowOpacity: 0.2,
-    shadowRadius: 1.41,
-    elevation: 2,
   },
   item: {
     padding: 17,
@@ -331,12 +319,12 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   placeholderStyle: {
-    fontSize: 20,
-    color: "grey",
+    fontSize: 18,
+    color: "red",
   },
   selectedTextStyle: {
     height: 65,
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: "bold",
     color: "black",
   },
@@ -351,7 +339,6 @@ const styles = StyleSheet.create({
   text_line: {
     fontSize: 18,
     fontWeight: "bold",
-    marginTop: 0,
     marginLeft: 10,
     textAlign: "left",
   },

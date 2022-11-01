@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Text, TextInput } from "react-native";
 import CheckBox from "expo-checkbox";
-
 export default function Tel_Number_1() {
   const [agree, setAgree] = useState(true);
   return (
@@ -12,7 +11,6 @@ export default function Tel_Number_1() {
         keyboardType="numeric"
         maxLength={9}
       />
-
       <Text style={styles.label}>სმს</Text>
       <CheckBox
         style={styles.check_box}
@@ -23,7 +21,6 @@ export default function Tel_Number_1() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container_line: {
     flexDirection: "row",

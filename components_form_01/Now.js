@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { StyleSheet, View, Text } from "react-native";
-
 export default function Now() {
   const [date, setDate] = useState(null);
-
   useEffect(() => {
     let today = new Date();
     let date =
@@ -15,7 +13,6 @@ export default function Now() {
       "წელი.";
     setDate(date);
   }, []);
-
   return (
     <View style={styles.container}>
       <Text style={styles.text_Item_1}>აქტის შედგენის თარიღი:</Text>
@@ -23,13 +20,11 @@ export default function Now() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     alignItems: "center",
   },
-
   item: {
     padding: 25,
     flexDirection: "row",
@@ -43,7 +38,7 @@ const styles = StyleSheet.create({
     color: "red",
   },
   text_Item_1: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "bold",
     textAlign: "left",
     marginRight: 15,
@@ -52,7 +47,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   selectedTextStyle: {
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "bold",
     color: "black",
   },

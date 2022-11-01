@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
   container_line: {
     flexDirection: "row",
     alignItems: "center",
+    marginBottom: 0,
   },
   text_line: {
     fontSize: 20,
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color: "black",
-    height: 35,
+    height: 32,
     width: 470,
     padding: 5,
     marginLeft: 62,

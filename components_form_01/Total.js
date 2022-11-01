@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { StyleSheet, View, Text, Button } from "react-native";
-
 import { N_1 } from "./Profile_1";
 import { N_2 } from "./Profile_2";
 import { N_3 } from "./Profile_3";
-
 export default function Total() {
   const [totalCount, setTotalCount] = useState(null);
-
   return (
     <View style={styles.container_line}>
       <Button
@@ -17,16 +14,15 @@ export default function Total() {
         title="თვის ტარიფი"
       />
       <Text style={styles.text_line_2}>{totalCount}</Text>
-
       <Text style={styles.text_line_3}>ლარი.</Text>
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container_line: {
     flexDirection: "row",
     alignItems: "center",
+    marginBottom: 10,
   },
   text_line_1: {
     fontSize: 25,

@@ -1,32 +1,21 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import DropDownComponent_01 from "./DropDownComponent_01";
-import DropDownComponent_02 from "./DropDownComponent_02";
-
+import DropDownComponent from "./DropDownComponent";
 export default function Employee_1() {
   return (
     <View>
-      <View style={styles.container_line_01}>
+      <View>
         <Text style={styles.text_line_01}>
-          რეგისტრაციის აქტზე ხელმომწერის თანამდებობა:
+          რეგისტრაციის აქტზე ხელმომწერის თანამდებობა და სახელი, გვარი:
         </Text>
-        <DropDownComponent_01 />
-      </View>
-      <View style={styles.container_line_01}>
-        <Text style={styles.text_line_01}>
-          აქტზე ხელმომწერის სახელი და გვარი:
-        </Text>
-        <DropDownComponent_02 />
+        <DropDownComponent />
       </View>
     </View>
   );
 }
-
 const styles = StyleSheet.create({
-  container_line_01: {},
   text_line_01: {
     fontSize: 18,
     fontWeight: "bold",
-    marginTop: 0,
   },
 });

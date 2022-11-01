@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, View, Text, TextInput } from "react-native";
-
 export default function Representative() {
   return (
     <View style={styles.container_line}>
@@ -9,7 +8,6 @@ export default function Representative() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container_line: {
     flexDirection: "row",

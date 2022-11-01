@@ -1,9 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View, Image } from "react-native";
-
 export default function Header_Reg_Form_01() {
   return (
-    <View style={styles.container}>
+    <View>
       <View style={styles.container_01}>
         <Image
           style={styles.logo_rustavi}
@@ -22,13 +21,8 @@ export default function Header_Reg_Form_01() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
-  container: {
-    marginTop: 0,
-  },
   container_01: {
-    marginTop: 0,
     backgroundColor: "white",
     flexDirection: "row",
     justifyContent: "space-around",
@@ -41,6 +35,7 @@ const styles = StyleSheet.create({
   header_container: {
     alignItems: "center",
     justifyContent: "flex-start",
+    marginBottom: 3,
   },
   header_text: {
     fontSize: 25,
@@ -49,7 +44,6 @@ const styles = StyleSheet.create({
   },
   header_text_1: {
     fontSize: 20,
-    marginTop: 0,
   },
   divider_container: {
     backgroundColor: "red",

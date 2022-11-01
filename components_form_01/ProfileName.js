@@ -1,9 +1,9 @@
 import React from "react";
 import { StyleSheet, View, Text, TextInput } from "react-native";
-export default function Owner() {
+export default function ProfileName() {
   return (
     <View style={styles.container_line}>
-      <Text style={styles.text_line}>ფართის მესაკუთრე:</Text>
+      <Text style={styles.text_line}>პროფილი:</Text>
       <TextInput style={styles.textInput_line} />
     </View>
   );
@@ -24,9 +24,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: "bold",
     color: "black",
-    height: 35,
+    height: 32,
     width: 470,
     padding: 5,
-    marginLeft: 78.5,
+    marginLeft: 180,
   },
 });

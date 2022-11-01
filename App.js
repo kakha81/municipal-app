@@ -1,5 +1,12 @@
 import * as React from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  KeyboardAvoidingView,
+  ScrollView,
+} from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Header_Reg_Form_01 from "./components_form_01/Header_Reg_Form_01";
@@ -15,6 +22,7 @@ import Legal_Entity from "./components_form_01/Legal_Entity";
 import Identification_Number from "./components_form_01/Identification_Number";
 import Address from "./components_form_01/Address";
 import Owner from "./components_form_01/Owner";
+import ProfileName from "./components_form_01/ProfileName";
 import Tel_Number_1 from "./components_form_01/Tel_Number_1";
 import Tel_Number_2 from "./components_form_01/Tel_Number_2";
 import Tel_Number_3 from "./components_form_01/Tel_Number_3";
@@ -23,11 +31,11 @@ import Profile_1 from "./components_form_01/Profile_1";
 import Profile_2 from "./components_form_01/Profile_2";
 import Profile_3 from "./components_form_01/Profile_3";
 import Total from "./components_form_01/Total";
+import CanvasMain from "./components_form_01/CanvasMain";
+import Signature from "./components_form_01/Signature";
 import Reg_Date from "./components_form_01/Reg_Date";
 import Now from "./components_form_01/Now";
-
-const image = require("../mosakrebeli_app/assets/logo_municipaluri.png");
-
+const image = require("../municipal-app/assets/logo_municipaluri.png");
 function HomeScreen({ navigation }) {
   return (
     <View
@@ -39,7 +47,7 @@ function HomeScreen({ navigation }) {
       }}
     >
       <Text style={styles.text_header}>მუნიციპალური ინსპექცია</Text>
-      <Text style={styles.text_header_1}>დასუფთავების მოსკრებელი</Text>
+      <Text style={styles.text_header_1}>დასუფთავების მოსaკრებელი</Text>
       <Image source={image} style={styles.image} />
       <Text style={styles.button_1} onPress={() => navigation.navigate(" ")}>
         რეგისტრაცია
@@ -50,75 +58,85 @@ function HomeScreen({ navigation }) {
     </View>
   );
 }
-
 function Registration() {
   return (
-    <View style={styles.container}>
-      <Header_Reg_Form_01 />
-      <Reg_Number_01 />
-      <Employee_1 />
-      <Employee_2 />
-      <Representative />
-      <Private_Number />
-      <Legal_Entity />
-      <Identification_Number />
-      <Address />
-      <Owner />
-      <Tel_Number_1 />
-      <Tel_Number_2 />
-      <Tel_Number_3 />
-      <Tel_Number_4 />
-      <Profile_1 />
-      <Profile_2 />
-      <Profile_3 />
-      <Total />
-      <Reg_Date />
-      <Now />
-    </View>
+    <KeyboardAvoidingView enableOnAndroid behavior='padding'>
+      <ScrollView>
+        <View style={styles.container}>
+          <Header_Reg_Form_01 />
+          <Reg_Number_01 />
+          <Employee_1 />
+          <Employee_2 />
+          <Representative />
+          <Private_Number />
+          <Legal_Entity />
+          <Identification_Number />
+          <Address />
+          <Owner />
+          <ProfileName />
+          <Tel_Number_1 />
+          <Tel_Number_2 />
+          <Tel_Number_3 />
+          <Tel_Number_4 />
+          <Profile_1 />
+          <Profile_2 />
+          <Profile_3 />
+          <Total />
+          <CanvasMain />
+          <Signature />
+          <Reg_Date />
+          <Now />
+        </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
 function Changing() {
   return (
-    <View style={styles.container}>
-      <Header_Reg_Form_02 />
-      <Reg_Number_02 />
-      <Employee_1 />
-      <Employee_2 />
-      <Subscriber />
-      <Representative />
-      <Private_Number />
-      <Legal_Entity />
-      <Identification_Number />
-      <Address />
-      <Owner />
-      <Tel_Number_1 />
-      <Tel_Number_2 />
-      <Tel_Number_3 />
-      <Tel_Number_4 />
-      <Profile_1 />
-      <Profile_2 />
-      <Profile_3 />
-      <Total />
-      <Reg_Date />
-      <Now />
-    </View>
+    <KeyboardAvoidingView enableOnAndroid behavior='padding'>
+      <ScrollView>
+        <View style={styles.container}>
+          <Header_Reg_Form_02 />
+          <Reg_Number_02 />
+          <Employee_1 />
+          <Employee_2 />
+          <Subscriber />
+          <Representative />
+          <Private_Number />
+          <Legal_Entity />
+          <Identification_Number />
+          <Address />
+          <Owner />
+          <ProfileName />
+          <Tel_Number_1 />
+          <Tel_Number_2 />
+          <Tel_Number_3 />
+          <Tel_Number_4 />
+          <Profile_1 />
+          <Profile_2 />
+          <Profile_3 />
+          <Total />
+          <CanvasMain />
+          <Signature />
+          <Reg_Date />
+          <Now />
+        </View>
+      </ScrollView>
+    </KeyboardAvoidingView>
   );
 }
-
 const Stack = createNativeStackNavigator();
-
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="მთავარი გვერდი" component={HomeScreen} />
-        <Stack.Screen name=" " component={Registration} />
-        <Stack.Screen name="  " component={Changing} />
+      <Stack.Navigator initialRouteName='Home'>
+        <Stack.Screen name='მთავარი გვერდი' component={HomeScreen} />
+        <Stack.Screen name=' ' component={Registration} />
+        <Stack.Screen name='  ' component={Changing} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
-
 const styles = StyleSheet.create({
   text_header: {
     fontSize: 40,

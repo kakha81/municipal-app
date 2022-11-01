@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, View, Text, TextInput } from "react-native";
-
 export default function Private_Number() {
   return (
     <View style={styles.container_line}>
@@ -13,7 +12,6 @@ export default function Private_Number() {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container_line: {
     flexDirection: "row",
